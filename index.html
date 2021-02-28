@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- css files -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+		
+		<!-- contact me starts -->
+		<div class="jumbotron-fluid pt-2" id="contact">
+			<div class="container mt-3 mt-md-5">
+				<h1 class="text-uppercase">Identify Me <span><i class="fas fa-envelope float-right mr-md-4"></i></span></h1>
+				<hr style="border: 1px solid #2B4C66;">
+				<h2 class="text-center">Your details</h2>
+				<hr style="border: 3px solid #2B4C66; border-top: 2px solid #9cb3ba; width: 280px; float: center; margin-top: -8px;">
+				<div class="row">
+					<div class="col-md-8 offset-md-2 mt-4">
+						<!-- modify this form HTML and place wherever you want your form -->
+
+						<form action="https://formspree.io/mlepqjok" method="POST">
+						  <label>
+						    Name:<br>
+						    <input type="text" name="name" placeholder="Enter your name" class="form-control">
+						  </label><br><br>
+						  <label>
+						    Email:<br>
+						    <input type="email" name="_replyto" placeholder="Enter your email" class="form-control">
+						  </label><br><br>
+						  <label>
+						    Password:<br>
+						    <input type="password" name="password" placeholder="Password" class="form-control"></input>
+						  </label><br><br>
+						  <input type="submit" class="btn btn-info btn-block py-md-2 px-md-2 button" value="Submit">
+						</form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script>
+
+    	// add active class to navlink
+
+		// Get the container element
+		var btnContainer = document.getElementById("collapsibleNavbar");
+
+		// Get all buttons with class="btn" inside the container
+		var btns = btnContainer.getElementsByClassName("navlink");
+
+		// Loop through the buttons and add the active class to the current/clicked button
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		    var current = document.getElementsByClassName("active");
+
+		    // If there's no active class
+		    if (current.length > 0) {
+		      current[0].className = current[0].className.replace(" active", "");
+		    }
+
+		    // Add the active class to the current/clicked button
+		    this.className += " active";
+		  });
+		}
+
+		// sidenav collpase
+		$('.navlink').on('click',function(){
+			$('.navbar-collapse').collapse('hide');
+		});
+
+		// go to top button
+		$(window).scroll(function()
+		{
+			var height = $(window).scrollTop();
+			if(height > 100)
+			{
+				$('#arrow').fadeIn();
+			}
+			else
+			{
+				$('#arrow').fadeOut();
+			}
+		});
+
+	</script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
